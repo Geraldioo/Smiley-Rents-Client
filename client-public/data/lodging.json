@@ -1,0 +1,202 @@
+[
+    {
+        "name": "R101",
+        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
+        "roomCapacity": "2",
+        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
+        "location": "Jl. Arteri pondok indah No.1",
+        "price": "200000",
+        "typeId": "1",
+        "authorId": "1"
+    },
+    {
+        "name": "R102",
+        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
+        "roomCapacity": "2",
+        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
+        "location": "Jl. Arteri pondok indah No.1",
+        "price": "200000",
+        "typeId": "1",
+        "authorId": "1"
+    },
+    {
+        "name": "R103",
+        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
+        "roomCapacity": "2",
+        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
+        "location": "Jl. Arteri pondok indah No.1",
+        "price": "200000",
+        "typeId": "1",
+        "authorId": "1"
+    },
+    {
+        "name": "R104",
+        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
+        "roomCapacity": "2",
+        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
+        "location": "Jl. Arteri pondok indah No.1",
+        "price": "200000",
+        "typeId": "1",
+        "authorId": "1"
+    },
+    {
+        "name": "R105",
+        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
+        "roomCapacity": "2",
+        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
+        "location": "Jl. Arteri pondok indah No.1",
+        "price": "200000",
+        "typeId": "1",
+        "authorId": "1"
+    },
+    {
+        "name": "R106",
+        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
+        "roomCapacity": "2",
+        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
+        "location": "Jl. Arteri pondok indah No.1",
+        "price": "200000",
+        "typeId": "1",
+        "authorId": "1"
+    },
+    {
+        "name": "R107",
+        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
+        "roomCapacity": "2",
+        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
+        "location": "Jl. Arteri pondok indah No.1",
+        "price": "200000",
+        "typeId": "1",
+        "authorId": "1"
+    },
+    {
+        "name": "R108",
+        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
+        "roomCapacity": "2",
+        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
+        "location": "Jl. Arteri pondok indah No.1",
+        "price": "200000",
+        "typeId": "1",
+        "authorId": "1"
+    },
+    {
+        "name": "R109",
+        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
+        "roomCapacity": "2",
+        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
+        "location": "Jl. Arteri pondok indah No.1",
+        "price": "200000",
+        "typeId": "1",
+        "authorId": "1"
+    },
+    {
+        "name": "R110",
+        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
+        "roomCapacity": "2",
+        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
+        "location": "Jl. Arteri pondok indah No.1",
+        "price": "200000",
+        "typeId": "1",
+        "authorId": "1"
+    },
+    {
+        "name": "R201",
+        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
+        "roomCapacity": "2",
+        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
+        "location": "Jl. Arteri pondok indah No.1",
+        "price": "200000",
+        "typeId": "1",
+        "authorId": "1"
+    },
+    {
+        "name": "R202",
+        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
+        "roomCapacity": "2",
+        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
+        "location": "Jl. Arteri pondok indah No.1",
+        "price": "200000",
+        "typeId": "1",
+        "authorId": "1"
+    },
+    {
+        "name": "R203",
+        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
+        "roomCapacity": "2",
+        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
+        "location": "Jl. Arteri pondok indah No.1",
+        "price": "200000",
+        "typeId": "1",
+        "authorId": "1"
+    },
+    {
+        "name": "R204",
+        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
+        "roomCapacity": "2",
+        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
+        "location": "Jl. Arteri pondok indah No.1",
+        "price": "200000",
+        "typeId": "1",
+        "authorId": "1"
+    },
+    {
+        "name": "R205",
+        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
+        "roomCapacity": "2",
+        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
+        "location": "Jl. Arteri pondok indah No.1",
+        "price": "200000",
+        "typeId": "1",
+        "authorId": "1"
+    },
+    {
+        "name": "R206",
+        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
+        "roomCapacity": "2",
+        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
+        "location": "Jl. Arteri pondok indah No.1",
+        "price": "200000",
+        "typeId": "1",
+        "authorId": "1"
+    },
+    {
+        "name": "R207",
+        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
+        "roomCapacity": "2",
+        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
+        "location": "Jl. Arteri pondok indah No.1",
+        "price": "200000",
+        "typeId": "1",
+        "authorId": "1"
+    },
+    {
+        "name": "R208",
+        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
+        "roomCapacity": "2",
+        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
+        "location": "Jl. Arteri pondok indah No.1",
+        "price": "200000",
+        "typeId": "1",
+        "authorId": "1"
+    },
+    {
+        "name": "R209",
+        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
+        "roomCapacity": "2",
+        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
+        "location": "Jl. Arteri pondok indah No.1",
+        "price": "200000",
+        "typeId": "1",
+        "authorId": "1"
+    },
+    {
+        "name": "R210",
+        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
+        "roomCapacity": "2",
+        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
+        "location": "Jl. Arteri pondok indah No.1",
+        "price": "200000",
+        "typeId": "1",
+        "authorId": "1"
+    }
+]
