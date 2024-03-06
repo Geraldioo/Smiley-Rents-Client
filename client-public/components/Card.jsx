@@ -1,25 +1,22 @@
-function CardItem({ item }) {
+function CardItem({ item, changePage}) {
   return (
     <>
       <div
         className="col"
         style={{ cursor: "pointer" }}
         onClick={() => {
-          getDetail(item);
+          changePage("detail", item);
         }}
       >
-        <div className="card" style={{ height: "30rem" }}>
+        <div className="card" style={{ height: "18rem" }}>
           <img
-            src={item.imgUrl}
+            src={item.imgUrl} className="img-fluid"
             style={{ height: "12rem", objectFit: "cover" }}
             alt=""
           />
           <div className="card-body">
-            <h5 className="card-title">{item.name}</h5><br/>
-            <p className="card-text">Facility: {item.facility}</p>
-            <p className="card-text">Room Capacity: {item.roomCapacity}</p>
-            <p className="card-text">Address: {item.location}</p>
-            <p className="card-text">Price: Rp.{item.price}</p>
+            <h5 className="card-title text-center">{item.name}</h5>
+            <p className="card-text text-center">Genre: {item.genre}</p>
           </div>
         </div>
       </div>
@@ -27,4 +24,9 @@ function CardItem({ item }) {
   );
 }
 
-export default CardItem
+export default CardItem;
+
+
+
+
+

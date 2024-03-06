@@ -1,202 +1,64 @@
 [
-    {
-        "name": "R101",
-        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
-        "roomCapacity": "2",
-        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
-        "location": "Jl. Arteri pondok indah No.1",
-        "price": "200000",
-        "typeId": "1",
-        "authorId": "1"
-    },
-    {
-        "name": "R102",
-        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
-        "roomCapacity": "2",
-        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
-        "location": "Jl. Arteri pondok indah No.1",
-        "price": "200000",
-        "typeId": "1",
-        "authorId": "1"
-    },
-    {
-        "name": "R103",
-        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
-        "roomCapacity": "2",
-        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
-        "location": "Jl. Arteri pondok indah No.1",
-        "price": "200000",
-        "typeId": "1",
-        "authorId": "1"
-    },
-    {
-        "name": "R104",
-        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
-        "roomCapacity": "2",
-        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
-        "location": "Jl. Arteri pondok indah No.1",
-        "price": "200000",
-        "typeId": "1",
-        "authorId": "1"
-    },
-    {
-        "name": "R105",
-        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
-        "roomCapacity": "2",
-        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
-        "location": "Jl. Arteri pondok indah No.1",
-        "price": "200000",
-        "typeId": "1",
-        "authorId": "1"
-    },
-    {
-        "name": "R106",
-        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
-        "roomCapacity": "2",
-        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
-        "location": "Jl. Arteri pondok indah No.1",
-        "price": "200000",
-        "typeId": "1",
-        "authorId": "1"
-    },
-    {
-        "name": "R107",
-        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
-        "roomCapacity": "2",
-        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
-        "location": "Jl. Arteri pondok indah No.1",
-        "price": "200000",
-        "typeId": "1",
-        "authorId": "1"
-    },
-    {
-        "name": "R108",
-        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
-        "roomCapacity": "2",
-        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
-        "location": "Jl. Arteri pondok indah No.1",
-        "price": "200000",
-        "typeId": "1",
-        "authorId": "1"
-    },
-    {
-        "name": "R109",
-        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
-        "roomCapacity": "2",
-        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
-        "location": "Jl. Arteri pondok indah No.1",
-        "price": "200000",
-        "typeId": "1",
-        "authorId": "1"
-    },
-    {
-        "name": "R110",
-        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
-        "roomCapacity": "2",
-        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
-        "location": "Jl. Arteri pondok indah No.1",
-        "price": "200000",
-        "typeId": "1",
-        "authorId": "1"
-    },
-    {
-        "name": "R201",
-        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
-        "roomCapacity": "2",
-        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
-        "location": "Jl. Arteri pondok indah No.1",
-        "price": "200000",
-        "typeId": "1",
-        "authorId": "1"
-    },
-    {
-        "name": "R202",
-        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
-        "roomCapacity": "2",
-        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
-        "location": "Jl. Arteri pondok indah No.1",
-        "price": "200000",
-        "typeId": "1",
-        "authorId": "1"
-    },
-    {
-        "name": "R203",
-        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
-        "roomCapacity": "2",
-        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
-        "location": "Jl. Arteri pondok indah No.1",
-        "price": "200000",
-        "typeId": "1",
-        "authorId": "1"
-    },
-    {
-        "name": "R204",
-        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
-        "roomCapacity": "2",
-        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
-        "location": "Jl. Arteri pondok indah No.1",
-        "price": "200000",
-        "typeId": "1",
-        "authorId": "1"
-    },
-    {
-        "name": "R205",
-        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
-        "roomCapacity": "2",
-        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
-        "location": "Jl. Arteri pondok indah No.1",
-        "price": "200000",
-        "typeId": "1",
-        "authorId": "1"
-    },
-    {
-        "name": "R206",
-        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
-        "roomCapacity": "2",
-        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
-        "location": "Jl. Arteri pondok indah No.1",
-        "price": "200000",
-        "typeId": "1",
-        "authorId": "1"
-    },
-    {
-        "name": "R207",
-        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
-        "roomCapacity": "2",
-        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
-        "location": "Jl. Arteri pondok indah No.1",
-        "price": "200000",
-        "typeId": "1",
-        "authorId": "1"
-    },
-    {
-        "name": "R208",
-        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
-        "roomCapacity": "2",
-        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
-        "location": "Jl. Arteri pondok indah No.1",
-        "price": "200000",
-        "typeId": "1",
-        "authorId": "1"
-    },
-    {
-        "name": "R209",
-        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
-        "roomCapacity": "2",
-        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
-        "location": "Jl. Arteri pondok indah No.1",
-        "price": "200000",
-        "typeId": "1",
-        "authorId": "1"
-    },
-    {
-        "name": "R210",
-        "facility": "1 Single Bed, 1 Bathroom, AC, TV, Mineral water",
-        "roomCapacity": "2",
-        "imgUrl": "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_1280.jpg",
-        "location": "Jl. Arteri pondok indah No.1",
-        "price": "200000",
-        "typeId": "1",
-        "authorId": "1"
-    }
+  {
+    "name": "Tensura",
+    "genre": "Fantasy",
+    "imgUrl": "https://wallpapercave.com/wp/wp9448412.jpg",
+    "synopsis": "Setelah bereinkarnasi, Satoru berubah menjadi Slime yang kuat dan mampu mengubah bentuknya sesuai keinginannya.Di dunia fantasi yang baru, ia bertemu dengan berbagai makhluk ajaib dan mencoba memahami dunia yang tak dikenalinya.Satoru kemudian mengenali dirinya sebagai Rimuru Tempest, nama baru yang ia pilih untuk petualangannya di dunia baru ini."
+  },
+  {
+    "name": "Boku No Hero",
+    "genre": "Fantasy, Action",
+    "imgUrl": "https://wallpapercave.com/wp/wp1874068.jpg",
+    "synopsis": "Boku no Hero Academia adalah serial anime dan manga yang mengisahkan tentang dunia di mana hampir semua orang memiliki kekuatan super yang disebut Quirk. Cerita berfokus pada seorang remaja bernama Izuku Midoriya yang bermimpi menjadi seorang pahlawan super meskipun ia lahir tanpa Quirk. Namun, takdirnya berubah ketika ia bertemu dengan pahlawan terkenal bernama All Might, yang memberikan Quirk-nya kepadanya."
+  },
+  
+
+  {
+    "name": "Naruto",
+    "genre": "Action",
+    "imgUrl": "https://wallpapercave.com/wp/wp5876981.jpg",
+    "synopsis": "Naruto adalah sebuah cerita manga dan anime yang mengikuti petualangan seorang ninja muda bernama Naruto Uzumaki. Naruto adalah seorang anak yatim piatu yang memiliki impian besar untuk menjadi Hokage, pemimpin desa ninja terkuat di desanya, Desa Daun Konoha. Namun, Naruto memiliki masa lalu yang sulit karena ia terlahir sebagai jinchuriki, yaitu manusia yang tubuhnya menjadi tempat persembunyian bagi monster rubah ekor sembilan berekor yang disebut Kyuubi. Monster itu menyerang desa dan membawa malapetaka, menyebabkan Naruto diperlakukan sebagai orang asing oleh sebagian besar penduduk desa."
+  },
+  {
+    "name": "Solo Leveling",
+    "genre": "Action, Fantasy",
+    "imgUrl": "https://d.newsweek.com/en/full/2070597/solo-leveling.png?w=790&f=f2093969474506e99f13b94418398b11",
+    "synopsis": "Sung Jin-Woo awalnya adalah seorang E atau pemain paling lemah dalam profesi Pemburu, yang merupakan sekelompok orang yang melawan monster tersebut. Namun, setelah mengalami kejadian misterius yang hampir membuatnya tewas, ia mendapatkan kekuatan unik yang memungkinkannya untuk level up seperti dalam sebuah permainan."
+  },
+  {
+    "name": "Jujutsu Kaisen",
+    "genre": "Action, Supranatural",
+    "imgUrl": "https://images6.fanpop.com/image/photos/43800000/Jujutsu-Kaisen-jujutsu-kaisen-43895113-1920-1080.jpg",
+    "synopsis": "Jujutsu Kaisen adalah sebuah seri manga dan anime yang ditulis dan diilustrasikan oleh Gege Akutami. Cerita ini mengikuti perjalanan seorang remaja bernama Yuji Itadori, yang secara tidak sengaja menjadi tuan rumah bagi sebuah benda terkutuk yang sangat kuat yang disebut Sukuna's Finger. Setelah kejadian itu, Yuji bergabung dengan Sekolah Tinggi Jujutsu Tokyo, sebuah institusi yang melatih pengguna jujutsu untuk melawan makhluk-makhluk terkutuk yang mengancam dunia manusia."
+  },
+  {
+    "name": "Shingeki No Kyojin",
+    "genre": "Action, Thriller",
+    "imgUrl": "http://getwallpapers.com/wallpaper/full/3/6/7/95105.jpg",
+    "synopsis": "Attack on Titan (Shingeki no Kyojin) adalah sebuah seri manga yang ditulis dan diilustrasikan oleh Hajime Isayama. Serial ini juga telah diadaptasi menjadi sebuah anime yang sangat populer. Cerita ini berlatar di dunia di mana manusia hidup di kota-kota benteng yang besar karena terancam oleh raksasa humanoid raksasa yang dikenal sebagai Titan."
+  },
+  {
+    "name": "One Piece",
+    "genre": "Fantasy",
+    "imgUrl": "http://www.pixelstalk.net/wp-content/uploads/2016/03/One-Piece-Wallpaper-HD-Dekstop-Background.jpg",
+    "synopsis": "Cerita dimulai dengan Luffy yang berusaha untuk menemukan harta legendaris bernama One Piece dan menjadi Raja Bajak Laut, posisi yang paling diinginkan di dunia bajak laut. Dia memiliki impian besar ini setelah terinspirasi oleh seorang bajak laut terkenal yang meninggal, Gol D. Roger, yang menemukan One Piece dan memulai Era Bajak Laut."
+  },
+  {
+    "name": "Fairy Tail",
+    "genre": "Fantasy",
+    "imgUrl": "http://images6.fanpop.com/image/photos/34900000/-Fairy-Tail-fairy-tail-34963854-1024-768.jpg",
+    "synopsis": "Guild Fairy Tail berlokasi di kota Fiore, dunia di mana sihir adalah hal yang umum dan digunakan dalam kehidupan sehari-hari. Cerita mengikuti petualangan Lucy Heartfilia, seorang penyihir muda yang bergabung dengan Fairy Tail setelah bertemu dengan Natsu Dragneel, seorang penyihir pengguna sihir naga api yang merupakan anggota guild tersebut. Bersama dengan teman-teman mereka, termasuk Gray Fullbuster, Erza Scarlet, dan Happy (seekor kucing biru yang bisa terbang), mereka menjalani berbagai misi dan bertarung melawan berbagai musuh, serta menjelajahi dunia sihir yang beragam."
+  },
+  {
+    "name": "Kakegurui",
+    "genre": "Game, Supranatural",
+    "imgUrl": "https://vignette.wikia.nocookie.net/doblaje/images/b/b3/Kakegurui.jpg/revision/latest?cb=20180128080051&path-prefix=es",
+    "synopsis": "Di Hyakkaou Academy, kekayaan, kekuasaan, dan status sosial ditentukan oleh kemampuan seseorang dalam perjudian. Para siswa yang hebat dalam permainan judi dihormati dan disegani, sementara yang kalah seringkali diperlakukan seperti budak atau house pet. Cerita ini mengikuti perjalanan seorang siswi bernama Yumeko Jabami, seorang gadis cantik dengan kecenderungan untuk mengambil risiko yang tinggi dalam perjudian."
+  },
+  {
+    "name": "Sword Art Online",
+    "genre": "Fantasy, Sci-Fi, Action",
+    "imgUrl": "http://getwallpapers.com/wallpaper/full/5/b/1/1301302-sao-wallpaper-hd-1920x1215-for-samsung-galaxy.jpg",
+    "synopsis": "Cerita dimulai ketika pemain permainan daring bernama Kirito dan ribuan pemain lainnya terperangkap di dalam permainan virtual realitas daring yang sangat populer yang disebut Sword Art Online (SAO). Mereka dikunci di dalam permainan oleh pembuatnya, Kayaba Akihiko, dan diberi tahu bahwa satu-satunya cara untuk keluar adalah dengan mencapai level terakhir dan mengalahkan bos terakhir."
+  }
 ]
