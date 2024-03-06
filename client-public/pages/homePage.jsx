@@ -10,9 +10,13 @@ function HomePage(props) {
     try {
       const { data } = await axios({
         method: "get",
-        url: "https://kzhayin.lodging.web.id/pub/lodgings",
+        url: "https://kzhayin.lodging.web.id/lodgings",
+        headers: {
+          Authorization: 'Bearer ' + localStorage.access_token
+        }
+
       });
-      // console.log(data.data, "<<< ini data");
+      console.log(localStorage.access_token, "<<< ini data");
       setLodging(data.data);
     } catch (error) {
       console.log(error);

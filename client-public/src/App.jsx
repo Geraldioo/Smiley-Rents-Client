@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "../components/NavBar";
 // import data from "../data/lodging.json";
 import HomePage from "../pages/homePage";
@@ -15,12 +15,19 @@ function App() {
     setSingleData(item)
   };
 
+  useEffect(() => {
+    console.log(localStorage, "<<<< INI L STRG");
+    if (localStorage.access_token) {
+      changePage("home")
+    }
+  }, [])
+
   return (
     <>
-      <Navbar changePage={changePage} />
+      {page !== "login" && <Navbar changePage={changePage} />}
+      {page === "login" && <LoginPage changePage={changePage} />}
       {page === "home" && <HomePage changePage={changePage} />}
       {page === "detail" && <DetailPage item={singleData} changePage={changePage} />}
-      {page === "login" && <LoginPage changePage={changePage} />}
     </>
   );
 }
