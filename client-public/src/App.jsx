@@ -3,6 +3,8 @@ import Navbar from "../components/NavBar";
 // import data from "../data/lodging.json";
 import HomePage from "../pages/homePage";
 import DetailPage from "../pages/detailPage";
+import LoginPage from "../pages/login";
+
 
 function App() {
   const [page, setPage] = useState("home");
@@ -18,6 +20,7 @@ function App() {
       <Navbar changePage={changePage} />
       {page === "home" && <HomePage changePage={changePage} />}
       {page === "detail" && <DetailPage item={singleData} changePage={changePage} />}
+      {page === "login" && <LoginPage changePage={changePage} />}
     </>
   );
 }

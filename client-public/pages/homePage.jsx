@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import CardItem from "../components/Card";
 import axios from "axios";
 
-function HomePage({ getDetail, changePage }) {
+function HomePage(props) {
+  const { getDetail, changePage } = props
   const [lodgings, setLodging] = useState(null);
 
   async function fetchData() {
@@ -11,7 +12,7 @@ function HomePage({ getDetail, changePage }) {
         method: "get",
         url: "https://kzhayin.lodging.web.id/pub/lodgings",
       });
-      console.log(data.data, "<<< ini data");
+      // console.log(data.data, "<<< ini data");
       setLodging(data.data);
     } catch (error) {
       console.log(error);
@@ -32,7 +33,7 @@ function HomePage({ getDetail, changePage }) {
             fontSize: "4rem",
           }}
         >
-          My Anime List
+        Lodgings List
         </h2>
         <div className="row row-cols-4 g-3">
           {lodgings &&
@@ -52,16 +53,3 @@ function HomePage({ getDetail, changePage }) {
 
 export default HomePage;
 
-//return (
-//   <>
-//   <div className="container my-5">
-//     <h2 className="text-center my-5">Our Menus</h2>
-//     <div className="row row-cols-4 g-3">
-//       {cuisine &&
-//         cuisine.map((cuisine) => (
-//           <CardItem cuisine={cuisine} key={cuisine.id} />
-//         ))}
-//     </div>
-//   </div>
-// </>
-// );
