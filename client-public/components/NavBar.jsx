@@ -1,3 +1,4 @@
+
 function Navbar(props) {
   const { changePage } = props
   return (

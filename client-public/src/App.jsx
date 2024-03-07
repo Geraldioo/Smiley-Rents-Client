@@ -1,35 +1,46 @@
+import {RouterProvider, createBrowserRouter} from "react-router-dom"
 import { useEffect, useState } from "react";
 import Navbar from "../components/NavBar";
 // import data from "../data/lodging.json";
 import HomePage from "../pages/homePage";
 import DetailPage from "../pages/detailPage";
 import LoginPage from "../pages/login";
+import MainLayout from "../components/mainLayout";
 
 
 function App() {
-  const [page, setPage] = useState("home");
-  const [singleData, setSingleData] = useState(null);
+  // const [page, setPage] = useState("home");
 
-  const changePage = (page, item) => {
-    setPage(page);
-    setSingleData(item)
-  };
+  // const changePage = (page, lodging) => {
+  //   setPage(page);
+  //   setSingleData(lodging)
+  // };
 
-  useEffect(() => {
-    console.log(localStorage, "<<<< INI L STRG");
-    if (localStorage.access_token) {
-      changePage("home")
+  const router = createBrowserRouter([
+    {
+      element: <MainLayout />,
+      children: [
+        {
+          path: "/pub/lodgings",
+          element: <HomePage />
+        },
+        {
+          path: "/pub/lodgings/:id",
+          element: <DetailPage />
+        }
+      ]
     }
-  }, [])
+  ])
 
-  return (
-    <>
-      {page !== "login" && <Navbar changePage={changePage} />}
-      {page === "login" && <LoginPage changePage={changePage} />}
-      {page === "home" && <HomePage changePage={changePage} />}
-      {page === "detail" && <DetailPage item={singleData} changePage={changePage} />}
-    </>
-  );
+
+  // useEffect(() => {
+  //   console.log(localStorage, "<<<< INI L STRG");
+  //   if (localStorage.access_token) {
+  //     changePage("home")
+  //   }
+  // }, [])
+
+  return <RouterProvider router={router} />
 }
 
 export default App;

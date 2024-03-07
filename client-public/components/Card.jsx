@@ -1,13 +1,14 @@
+
+import { Link } from "react-router-dom";
+
 function CardItem(props) {
-  const { lodging, changePage } = props
+  const { lodging } = props
   return (
     <>
+    <Link className="text-decoration-none text-black" to={`/pub/lodgings/${lodging.id}`}>
       <div
         className="col shadow-lg p-3 mb-5 bg-body-tertiary rounded"
         style={{ cursor: "pointer" }}
-        onClick={() => {
-          changePage("detail", lodging);
-        }}
         data-aos="fade-down"
         data-aos-easing="linear"
         data-aos-duration="300"
@@ -30,6 +31,7 @@ function CardItem(props) {
           </div>
         </div>
       </div>
+      </Link>
     </>
   );
 }
