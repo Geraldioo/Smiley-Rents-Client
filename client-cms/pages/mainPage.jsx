@@ -7,7 +7,6 @@ import Swal from "sweetalert2";
 
 function MainPage() {
   const [lodgings, setLodging] = useState(null);
-  const [error, setError] = useState(false);
 
   async function fetchData() {
     try {
@@ -23,11 +22,6 @@ function MainPage() {
       setLodging(data);
     } catch (error) {
       console.log(error);
-      setError(error);
-      Swal.fire({
-        title: error.response.data.message,
-        icon: "error",
-      });
     }
   }
   //   // console.log(fetchData, "<<< INI FETCH");

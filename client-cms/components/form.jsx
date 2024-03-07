@@ -1,45 +1,60 @@
 import axios from "axios";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const Form = () => {
-const [input, setInput] = useState({
+  const navigate = useNavigate();
+  const [error, setError] = useState(false);
+  const [input, setInput] = useState({
     name: "",
     imgUrl: "",
     facility: "",
     roomCapacity: null,
     location: "",
     price: null,
-    typeId: null
-})
+    typeId: null,
+  });
 
-const handleInputChange = (event) => {
+  const handleInputChange = (event) => {
     console.log(event.target, "<<< INI EVENT");
-    const { name, value } = event.target
+    const { name, value } = event.target;
 
     const newInput = {
-        ...input,
-        [name]: value
-    }
+      ...input,
+      [name]: value,
+    };
 
     console.log(newInput, "<<< INI NEW INP");
+    console.log(input, "<<< INI INP");
 
-    setInput(newInput)
-}
+    setInput(newInput);
+  };
 
-const submitForm = async (event) => {
-    event.preventDefault()
+  const submitForm = async (event) => {
+    event.preventDefault();
+
+    console.log(event, "<<< INI EVENT ");
     try {
-        await axios ({
-            method: "POST",
-            url: "http://54.169.245.11/lodgings",
-            data: input
-        })
-        
+      await axios({
+        method: "POST",
+        url: "http://54.169.245.11/lodgings",
+        headers: {
+          Authorization: "Bearer " + localStorage.access_token,
+        },
+        data: input,
+      });
+      navigate("/lodgings");
     } catch (error) {
-        console.log(error);
+      console.log(error);
+      setError(error);
+      Swal.fire({
+        title: error.response.data.message,
+        icon: "error",
+      });
     }
-}
-
+  };
 
   return (
     <>
@@ -47,52 +62,54 @@ const submitForm = async (event) => {
         className="col-md-9 ms-sm-auto col-lg-10 px-md-4"
         id="new-product-section"
       >
-        <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-          <h1 className="display-2">New Product / Update Product</h1>
-        </div>
         <div className="row">
           <div className="col-12 col-md-6">
-            <form id="product-form">
+            <form id="product-form" onSubmit={submitForm}>
               <div className="mb-3">
                 <label htmlFor="product-name">
                   Name <span className="text-danger fw-bold">*</span>
                 </label>
                 <input
+                  name="name"
+                  onChange={handleInputChange}
                   type="text"
                   className="form-control"
                   id="product-name"
-                  placeholder="Enter product name"
+                  placeholder="Enter Lodging Name"
                   autoComplete="off"
                   required=""
                 />
               </div>
               <div className="mb-3">
                 <label htmlFor="product-category">
-                  Category <span className="text-danger fw-bold">*</span>
+                  Type <span className="text-danger fw-bold">*</span>
                 </label>
                 <select
                   id="product-category"
                   className="form-select"
                   required=""
+                  onChange={handleInputChange}
+                  name="typeId"
                 >
-                  <option value="" selected="" disabled="">
-                    -- Select Category --
+                  <option value="" defaultValue="null" disabled="">
+                    -- Select Types --
                   </option>
-                  <option value={1}>Furniture</option>
-                  <option value={2}>Workspace</option>
-                  <option value={3}>Storage</option>
-                  <option value={4}>Textile</option>
+                  <option value="1">Regular</option>
+                  <option value="2">Premium</option>
+                  <option value="3">Luxury</option>
                 </select>
               </div>
               <div className="mb-3">
                 <label htmlFor="product-desc">
-                  Description <span className="text-danger fw-bold">*</span>
+                  Facility <span className="text-danger fw-bold">*</span>
                 </label>
                 <input
+                  name="facility"
+                  onChange={handleInputChange}
                   type="text"
                   className="form-control"
                   id="product-desc"
-                  placeholder="Enter product description"
+                  placeholder="Enter Lodging Facility"
                   autoComplete="off"
                   required=""
                 />
@@ -101,14 +118,17 @@ const submitForm = async (event) => {
                 <div className="col-12 col-md-6">
                   <div className="mb-3">
                     <label htmlFor="product-stock">
-                      Stock <span className="text-danger fw-bold">*</span>
+                      Room Capacity{" "}
+                      <span className="text-danger fw-bold">*</span>
                     </label>
                     <input
+                      name="roomCapacity"
+                      onChange={handleInputChange}
                       type="number"
                       min={0}
                       className="form-control"
                       id="product-stock"
-                      placeholder="Enter product stock"
+                      placeholder="Enter Lodging Capacity"
                       autoComplete="off"
                       required=""
                     />
@@ -120,11 +140,13 @@ const submitForm = async (event) => {
                       Price <span className="text-danger fw-bold">*</span>
                     </label>
                     <input
+                      name="price"
+                      onChange={handleInputChange}
                       type="number"
                       min={0}
                       className="form-control"
                       id="product-price"
-                      placeholder="Enter product price"
+                      placeholder="Enter Lodging Price"
                       autoComplete="off"
                       required=""
                     />
@@ -134,10 +156,24 @@ const submitForm = async (event) => {
               <div className="mb-3">
                 <label htmlFor="product-image">Image</label>
                 <input
+                  name="imgUrl"
+                  onChange={handleInputChange}
                   type="text"
                   className="form-control"
                   id="product-image"
-                  placeholder="Enter product image url"
+                  placeholder="Enter Lodging Image Url"
+                  autoComplete="off"
+                />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="product-image">Location</label>
+                <input
+                  name="location"
+                  onChange={handleInputChange}
+                  type="text"
+                  className="form-control"
+                  id="product-image"
+                  placeholder="Enter Lodging Location"
                   autoComplete="off"
                 />
               </div>
@@ -151,6 +187,7 @@ const submitForm = async (event) => {
                   </a>
                 </div>
                 <div className="col-6">
+                  {/* <Link to={"/lodgings"}> */}
                   <button
                     className="btn btn-lg btn-primary rounded-pill w-100 p-2"
                     type="submit"
@@ -158,6 +195,7 @@ const submitForm = async (event) => {
                   >
                     Submit
                   </button>
+                  {/* </Link> */}
                 </div>
               </div>
             </form>
