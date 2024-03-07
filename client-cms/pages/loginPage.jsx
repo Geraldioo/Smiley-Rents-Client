@@ -59,7 +59,7 @@ function LoginPage() {
   return (
     <>
       {/* Login Section */}
-      <section className="container" id="login-section">
+      {/* <section className="container" id="login-section">
         <div className="row">
           <div className="col-12 text-center">
             <h1 className="mb-3 mt-5">Login Options</h1>
@@ -154,7 +154,17 @@ function LoginPage() {
           </div>
         </div>
       </section>
-      {/* End Login Section */}
+      End Login Section */}
+      <div
+  className="visme_d"
+  data-title="Untitled Project"
+  data-url="8r6noq0k-untitled-project"
+  data-domain="forms"
+  data-full-page="false"
+  data-min-height="500px"
+  data-form-id={42866}
+/>
+
     </>
   );
 }
