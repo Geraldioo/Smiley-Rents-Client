@@ -1,3 +1,5 @@
+import './style/App.css'
+
 import {
   RouterProvider,
   createBrowserRouter,
@@ -7,58 +9,65 @@ import LoginPage from "../pages/loginPage";
 // import { useEffect, useState } from "react";
 // import Navbar from "../components/NavBar";
 // import data from "../data/lodging.json";
-// import HomePage from "../pages/homePage";
 // import DetailPage from "../pages/detailPage";
 // import LoginPage from "../pages/login";
-// import MainLayout from "../components/mainLayout";
+import MainLayout from "../components/mainLayout";
+import HomePage from "../pages/homePage";
+import MainPage from '../pages/mainPage';
+
 
 const router = createBrowserRouter([
   {
     element: <MainLayout />,
-    loader: () => {
-      if (localStorage.access_token) {
-        return null;
-      }
-      return redirect("/login");
-    },
     children: [
       {
         path: "/",
         element: <HomePage />,
       },
+    ],
+  },
+  {
+    element: <MainLayout />,
+    loader: () => {
+      if (localStorage.access_token) {
+        return null
+      }
+      return redirect("/login");
+    },
+    children: [
       {
         path: "/lodgings",
         element: <MainPage />,
       },
-      {
-        path: "/lodgings",
-        element: <AddPage />,
-      },
-      {
-        path: "/lodgings/:id",
-        element: <DetailPage />,
-      },
-      {
-        path: "/lodgings/:id",
-        element: <EditPage />,
-      },
+      // {
+      //   path: "/lodgings",
+      //   element: <AddPage />,
+      // },
+      // {
+      //   path: "/lodgings/:id",
+      //   element: <DetailPage />,
+      // },
+      // {
+      //   path: "/lodgings/:id",
+      //   element: <EditPage />,
+      // },
       // {
       //   // delete
       //   path: "/lodgings/:id",
       //   element: <HomePage />,
       // },
-      {
-        path: "/types",
-        element: <TypePage />,
-      },
-      {
-        path: "/types",
-        element: <AddTypePage />,
-      },
-      {
-        path: "/types/:id",
-        element: <EditTypePage />,
-      },
+      // {
+      //   path: "/types",
+      //   element: <TypePage />,
+      // },
+      // {
+      //   path: "/types",
+      //   element: <AddTypePage />,
+      // },
+      // {
+      //   path: "/types/:id",
+      //   element: <EditTypePage />,
+      // },
       // {
       //   // delete
       //   path: "/types/:id",
@@ -71,7 +80,7 @@ const router = createBrowserRouter([
     element: <LoginPage />,
     loader: () => {
       if (localStorage.access_token) {
-        return redirect("/");
+        return redirect("/lodgings");
       }
       return null;
     },

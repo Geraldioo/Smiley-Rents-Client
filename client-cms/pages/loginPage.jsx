@@ -1,10 +1,11 @@
 import axios from "axios";
 import { useState } from "react";
 import Swal from 'sweetalert2'
+import { useNavigate } from "react-router-dom"
 
 
-function LoginPage(props) {
-  const { changePage } = props;
+function LoginPage() {
+  const navigate = useNavigate()
 
   const [input, setInput] = useState({
     email: "",
@@ -38,14 +39,14 @@ function LoginPage(props) {
     try {
       const { data } = await axios({
         method: "POST",
-        url: "https://kzhayin.lodging.web.id/login",
+        url: "http://54.169.245.11/login",
         data: input,
       });
       // 2. Simpan ke localstorage
     //   console.log(data, "INI DATA");
       localStorage.access_token = data.token;
       // 3. Pindahin halaman ke home
-      changePage("home");
+      navigate("/lodgings")
     } catch (error) {
         // console.log(error, "<<< INI ERROR");
       Swal.fire({
