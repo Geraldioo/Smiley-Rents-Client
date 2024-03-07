@@ -7,13 +7,10 @@ import {
 } from "react-router-dom";
 import LoginPage from "../pages/loginPage";
 // import { useEffect, useState } from "react";
-// import Navbar from "../components/NavBar";
-// import data from "../data/lodging.json";
-// import DetailPage from "../pages/detailPage";
-// import LoginPage from "../pages/login";
 import MainLayout from "../components/mainLayout";
 import HomePage from "../pages/homePage";
 import MainPage from '../pages/mainPage';
+import AddPage from '../pages/addPage';
 
 
 const router = createBrowserRouter([
@@ -39,14 +36,10 @@ const router = createBrowserRouter([
         path: "/lodgings",
         element: <MainPage />,
       },
-      // {
-      //   path: "/lodgings",
-      //   element: <AddPage />,
-      // },
-      // {
-      //   path: "/lodgings/:id",
-      //   element: <DetailPage />,
-      // },
+      {
+        path: "/lodgings/add",
+        element: <AddPage />,
+      },
       // {
       //   path: "/lodgings/:id",
       //   element: <EditPage />,
