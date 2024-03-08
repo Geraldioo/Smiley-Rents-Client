@@ -79,19 +79,21 @@ function MainPage() {
                       <td>{lodging.User.email}</td>
                       <td>
                         <span className="d-flex">
-                          <a href="" className="ms-3">
+                          <Link to={""} className="ms-3">
                             <span className="icon material-symbols-outlined text-danger">
                               delete
                             </span>
-                          </a>
-                          <Link to={`lodgings/${lodging.id}`} className="ms-3">
+                            </Link>
+                          <Link to={`/lodgings/${lodging.id}`} className="ms-3">
                             <span className="icon material-symbols-outlined text-danger">
                               edit
                             </span>
                           </Link>
+                          <Link to={t} className="ms-3">
                             <span className="icon material-symbols-outlined text-danger">
                               image
                             </span>
+                            </Link>
                         </span>
                       </td>
                     </tr>

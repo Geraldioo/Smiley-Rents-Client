@@ -8,22 +8,12 @@ import {
 import LoginPage from "../pages/loginPage";
 // import { useEffect, useState } from "react";
 import MainLayout from "../components/mainLayout";
-import HomePage from "../pages/homePage";
 import MainPage from '../pages/mainPage';
 import AddPage from '../pages/addPage';
 import EditPage from '../pages/editPage';
 
 
 const router = createBrowserRouter([
-  {
-    element: <MainLayout />,
-    children: [
-      {
-        path: "/",
-        element: <HomePage />,
-      },
-    ],
-  },
   {
     element: <MainLayout />,
     loader: () => {
@@ -33,6 +23,10 @@ const router = createBrowserRouter([
       return redirect("/login");
     },
     children: [
+      {
+        path: "/",
+        element: <MainPage />,
+      },
       {
         path: "/lodgings",
         element: <MainPage />,

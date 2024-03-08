@@ -1,25 +1,27 @@
 import axios from "axios";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import BASE_URL from "../src/constant";
+import { useEffect } from "react";
 
 const Form = () => {
   const navigate = useNavigate();
+  const { id } = useParams();
   const [error, setError] = useState(false);
   const [input, setInput] = useState({
     name: "",
     imgUrl: "",
     facility: "",
-    roomCapacity: null,
+    roomCapacity: "",
     location: "",
-    price: null,
-    typeId: null,
+    price: "",
+    typeId: "",
   });
-
+//   console.log(input, "<< input");
   const handleInputChange = (event) => {
-    console.log(event.target, "<<< INI EVENT");
+    // console.log(event.target, "<<< INI EVENT");
     const { name, value } = event.target;
 
     const newInput = {
@@ -27,8 +29,8 @@ const Form = () => {
       [name]: value,
     };
 
-    console.log(newInput, "<<< INI NEW INP");
-    console.log(input, "<<< INI INP");
+    // console.log(newInput, "<<< INI NEW INP");
+    // console.log(input, "<<< INI INP");
 
     setInput(newInput);
   };
@@ -36,16 +38,21 @@ const Form = () => {
   const submitForm = async (event) => {
     event.preventDefault();
 
-    console.log(event, "<<< INI EVENT ");
+    let config = {
+      method: "POST",
+      url: `${BASE_URL}/lodgings`,
+      headers: {
+        Authorization: "Bearer " + localStorage.access_token,
+      },
+      data: input,
+    };
+
+    if (id) {
+      (config.method = "PUT"), (config.url = `${BASE_URL}/lodgings/${id}`);
+    }
     try {
-      await axios({
-        method: "POST",
-        url: `${BASE_URL}/lodgings`,
-        headers: {
-          Authorization: "Bearer " + localStorage.access_token,
-        },
-        data: input,
-      });
+      await axios(config);
+
       navigate("/lodgings");
     } catch (error) {
       console.log(error);
@@ -56,6 +63,42 @@ const Form = () => {
       });
     }
   };
+
+  const fetchDataById = async () => {
+    try {
+      const { data } = await axios({
+        method: "GET",
+        url: `${BASE_URL}/lodgings/${id}`,
+        headers: {
+          Authorization: "Bearer " + localStorage.access_token,
+        },
+      });
+      setInput(data);
+    } catch (error) {
+      console.log(error);
+      setError(error);
+      Swal.fire({
+        title: error.response.data.message,
+        icon: "error",
+      });
+    }
+  };
+
+  useEffect(() => {
+    if (id) {
+      fetchDataById();
+    } else {
+      setInput({
+        name: "",
+        imgUrl: "",
+        facility: "",
+        roomCapacity: "",
+        location: "",
+        price: "",
+        typeId: "",
+      });
+    }
+  }, [id]);
 
   return (
     <>
@@ -71,6 +114,7 @@ const Form = () => {
                   Name <span className="text-danger fw-bold">*</span>
                 </label>
                 <input
+                  value={input.name}
                   name="name"
                   onChange={handleInputChange}
                   type="text"
@@ -91,8 +135,9 @@ const Form = () => {
                   required=""
                   onChange={handleInputChange}
                   name="typeId"
+                  value={input.typeId}
                 >
-                  <option value="" defaultValue="null" disabled="">
+                  <option value="" disabled="">
                     -- Select Types --
                   </option>
                   <option value="1">Regular</option>
@@ -106,6 +151,7 @@ const Form = () => {
                 </label>
                 <input
                   name="facility"
+                  value={input.facility}
                   onChange={handleInputChange}
                   type="text"
                   className="form-control"
@@ -119,11 +165,12 @@ const Form = () => {
                 <div className="col-12 col-md-6">
                   <div className="mb-3">
                     <label htmlFor="product-stock">
-                      Room Capacity{" "}
+                      Room Capacity
                       <span className="text-danger fw-bold">*</span>
                     </label>
                     <input
                       name="roomCapacity"
+                      value={input.roomCapacity}
                       onChange={handleInputChange}
                       type="number"
                       min={0}
@@ -142,6 +189,7 @@ const Form = () => {
                     </label>
                     <input
                       name="price"
+                      value={input.price}
                       onChange={handleInputChange}
                       type="number"
                       min={0}
@@ -158,6 +206,7 @@ const Form = () => {
                 <label htmlFor="product-image">Image</label>
                 <input
                   name="imgUrl"
+                  value={input.imgUrl}
                   onChange={handleInputChange}
                   type="text"
                   className="form-control"
@@ -170,6 +219,7 @@ const Form = () => {
                 <label htmlFor="product-image">Location</label>
                 <input
                   name="location"
+                  value={input.location}
                   onChange={handleInputChange}
                   type="text"
                   className="form-control"
@@ -180,7 +230,7 @@ const Form = () => {
               </div>
               <div className="row mt-5 mb-3">
                 <div className="col-6">
-                  <Link 
+                  <Link
                     to={-1}
                     className="btn btn-lg btn-light rounded-pill w-100 p-2"
                     href=""
