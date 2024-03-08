@@ -38,12 +38,12 @@ function Sidebar(){
         </li>
         
         <li className="nav-item">
-        <Link to={`/category`} className="nav-link" id="nav-category" style={{cursor : "pointer"}}>
+        <Link to={`/types`} className="nav-link" id="nav-category" style={{cursor : "pointer"}}>
             {" "}
             <span className="icon material-symbols-outlined me-2">
               category
             </span>
-            Categories
+            Types
             </Link> 
         </li>
         <li className="nav-item">

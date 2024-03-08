@@ -61,7 +61,7 @@ function MainPage() {
         id="product-section"
       >
         <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-          <h1 className="display-2" style={{ color: "white" }}>
+          <h1 className="display-2" style={{ color: "black" }}>
             Products
           </h1>
           <Link to={`/lodgings/add`} className="ms-3">

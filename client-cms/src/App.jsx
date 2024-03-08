@@ -12,6 +12,7 @@ import MainPage from '../pages/mainPage';
 import AddPage from '../pages/addPage';
 import EditPage from '../pages/editPage';
 import AddUser from '../pages/addUser';
+import TypePage from '../pages/typePage';
 
 
 const router = createBrowserRouter([
@@ -43,11 +44,11 @@ const router = createBrowserRouter([
       {
         path: "/add-user",
         element: <AddUser />
-      }
-      // {
-      //   path: "/types",
-      //   element: <TypePage />,
-      // },
+      },
+      {
+        path: "/types",
+        element: <TypePage />,
+      },
     ],
   },
   {

@@ -1,9 +1,11 @@
 import axios from "axios";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import BASE_URL from "../src/constant";
 import Swal from "sweetalert2";
 
 const AddUser = () => {
+  const navigate = useNavigate();
   const [input, setInput] = useState({
     email: "",
     password: "",
@@ -35,6 +37,13 @@ const AddUser = () => {
             },
             data: input
         })
+        navigate("/")
+        Swal.fire({
+            title: `Added New Staff`,
+            icon: "success",
+            timer: 2000,
+            showConfirmButton: false,
+          });
     } catch (error) {
         console.log(error);
         Swal.fire({
