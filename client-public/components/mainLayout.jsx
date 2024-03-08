@@ -5,6 +5,7 @@ const MainLayout = () => {
     return (
         <>
             <Navbar /> 
+            {/* <Carousel /> */}
             <Outlet />
         </>
     )
