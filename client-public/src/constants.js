@@ -1,3 +1,3 @@
-const BASE_URL = "https://kzhayin.lodging.web.id"
+const BASE_URL = "https://rent.geraldio.site"
 
 export default BASE_URL

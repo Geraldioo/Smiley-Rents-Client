@@ -13,7 +13,7 @@ function DetailPage(props) {
     try {
       const { data } = await axios({
         method: "GET",
-        url: `http://54.169.245.11/pub/lodgings/${id}`,
+        url: `${BASE_URL}/pub/lodgings/${id}`,
       });
       // console.log(data, "<<< INI DATA DI DETAIL");
       setLodging(data);

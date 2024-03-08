@@ -4,7 +4,6 @@ import Navbar from "../components/NavBar";
 // import data from "../data/lodging.json";
 import HomePage from "../pages/homePage";
 import DetailPage from "../pages/detailPage";
-import LoginPage from "../pages/login";
 import MainLayout from "../components/mainLayout";
 
 
@@ -20,6 +19,10 @@ function App() {
     {
       element: <MainLayout />,
       children: [
+        {
+          path: "/",
+          element: <HomePage />
+        },
         {
           path: "/pub/lodgings",
           element: <HomePage />
