@@ -64,12 +64,11 @@ function Sidebar(){
           <Link to={`/login`} className="nav-link" id="nav-login" style={{cursor : "pointer"}}>
             {" "}
             <span className="icon material-symbols-outlined me-2" >person</span>
-            Login 
+            Hello, {localStorage.email}
           </Link>
         </li>
         <li className="nav-item" onClick={logout}>
-          <a className="nav-link" href="" id="nav-logout">
-            {" "}
+          <a className="nav-link" id="nav-logout">
             <span className="icon material-symbols-outlined me-2">logout</span>
             Logout
           </a>

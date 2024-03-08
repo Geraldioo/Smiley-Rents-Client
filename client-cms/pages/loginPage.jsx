@@ -46,6 +46,7 @@ function LoginPage() {
       // 2. Simpan ke localstorage
       console.log(data, "INI DATA");
       localStorage.access_token = data.token;
+      localStorage.email = data.user.email
     //   localStorage.setItem("email", data.email)
       // 3. Pindahin halaman ke home
       navigate("/lodgings")

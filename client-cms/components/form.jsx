@@ -5,8 +5,9 @@ import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import BASE_URL from "../src/constant";
 import { useEffect } from "react";
+import Button from "./button";
 
-const Form = () => {
+const Form = ({types}) => {
   const navigate = useNavigate();
   const { id } = useParams();
   const [error, setError] = useState(false);
@@ -115,7 +116,7 @@ const Form = () => {
       });
     }
   }, [id]);
-
+// console.log(types, "<<< INI TYPE");
   return (
     <>
       <section
@@ -156,9 +157,9 @@ const Form = () => {
                   <option value="" disabled="">
                     -- Select Types --
                   </option>
-                  <option value="1">Regular</option>
-                  <option value="2">Premium</option>
-                  <option value="3">Luxury</option>
+                  {types && types.map((el) => (
+                  <option value={el.id}>{el.name}</option>
+                  ))}
                 </select>
               </div>
               <div className="mb-3">
@@ -244,28 +245,7 @@ const Form = () => {
                   autoComplete="off"
                 />
               </div>
-              <div className="row mt-5 mb-3">
-                <div className="col-6">
-                  <Link
-                    to={-1}
-                    className="btn btn-lg btn-light rounded-pill w-100 p-2"
-                    href=""
-                  >
-                    Cancel
-                  </Link>
-                </div>
-                <div className="col-6">
-                  {/* <Link to={"/lodgings"}> */}
-                  <button
-                    className="btn btn-lg btn-primary rounded-pill w-100 p-2"
-                    type="submit"
-                    href=""
-                  >
-                    Submit
-                  </button>
-                  {/* </Link> */}
-                </div>
-              </div>
+                  <Button />
             </form>
           </div>
         </div>

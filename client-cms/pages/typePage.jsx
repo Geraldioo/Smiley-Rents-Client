@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
 import BASE_URL from "../src/constant";
+import Swal from "sweetalert2";
 
 const TypePage = () => {
   const [types, setTypes] = useState(null);
@@ -20,6 +21,12 @@ const TypePage = () => {
       setTypes(data);
     } catch (error) {
       console.log(error);
+      Swal.fire({
+        title: error.response.data.message,
+        icon: "error",
+        timer: 2000,
+        showConfirmButton: false,
+      });
     }
   }
 

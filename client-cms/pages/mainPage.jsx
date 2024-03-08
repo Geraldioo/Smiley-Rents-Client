@@ -22,6 +22,12 @@ function MainPage() {
       setLodging(data);
     } catch (error) {
       console.log(error);
+      Swal.fire({
+        title: error.response.data.message,
+        icon: "error",
+        timer: 2000,
+        showConfirmButton: false,
+      });
     }
   }
 
@@ -85,6 +91,7 @@ function MainPage() {
                     Facility
                   </th>
                   <th scope="col">Room Capacity</th>
+                  <th scope="col">Location</th>
                   <th scope="col">Price</th>
                   <th scope="col">Author</th>
                   <th scope="col" width="50px" />
@@ -101,6 +108,7 @@ function MainPage() {
                       </td>
                       <td>{lodging.facility}</td>
                       <td>{lodging.roomCapacity}</td>
+                      <td>{lodging.location}</td>
                       <td className="fw-bold">Rp{lodging.price}</td>
                       <td>{lodging.User.email}</td>
                       <td>

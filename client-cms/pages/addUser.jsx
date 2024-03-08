@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import BASE_URL from "../src/constant";
 import Swal from "sweetalert2";
+import Button from "../components/button";
 
 const AddUser = () => {
   const navigate = useNavigate();
@@ -124,12 +125,7 @@ const AddUser = () => {
                       defaultValue={""}
                     />
                   </div>
-                  <button
-                    className="btn btn-lg btn-primary rounded-pill w-100 p-2 mt-3"
-                    type="submit"
-                  >
-                    Sign Up
-                  </button>
+                <Button />
                 </form>
               </div>
             </div>
