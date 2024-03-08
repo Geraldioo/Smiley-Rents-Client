@@ -12,7 +12,6 @@ function HomePage() {
   const search = (input) => {
     setParam({ ...param, search: input });
   };
-  
   const sort = (value) => {
     if (value === "-id") {
       setParam({ ...param, sort: value });
@@ -22,13 +21,11 @@ function HomePage() {
       setParam({ ...param, sort: undefined });
     }
   };
-  
   const filterBy = (value) => {
     setParam({ ...param, filterBy: value });
   };
-  // console.log(param, "<<< INI PARAM");
+
   const handleSearch = (event) => {
-    // console.log(event.target.value, "<<< EVENT");
     const { value } = event.target;
     search(value);
   };
@@ -40,7 +37,9 @@ function HomePage() {
     const { value } = event.target;
     filterBy(value);
   };
-  // console.log(param, "<< INI PARAM");
+  const handlePage = (number) => {
+    setParam({ ...param, "page[number]": number })
+  }
   async function fetchData() {
     try {
       const { data } = await axios({
@@ -48,8 +47,8 @@ function HomePage() {
         url: `${BASE_URL}/pub/lodgings`,
         params: param,
       });
-      // console.log(data, "<<<<");
       setLodging(data.data);
+      setPage(data.totalPage)
     } catch (error) {
       console.log(error);
     }
@@ -60,11 +59,15 @@ function HomePage() {
         method: "GET",
         url: `${BASE_URL}/pub/lodgings/types`,
       });
-      // console.log(data, "<<<< D");
       setTypes(data);
     } catch (error) {
       console.log(error);
     }
+  }
+
+  let totalPage = []
+  for (let i = 1; i <= page; i++){
+    totalPage.push(i)
   }
 
   useEffect(() => {
@@ -74,6 +77,7 @@ function HomePage() {
   useEffect(() => {
     fetchData();
   }, [param]);
+
   return (
     <>
   <div id="carouselExampleFade" className="carousel slide carousel-fade mb-4" data-bs-ride="carousel">
@@ -154,10 +158,12 @@ function HomePage() {
   </div>
 <div className="mx-auto p-2" style={{width: "200px"}}>
   <nav aria-label="Page navigation example">
-  <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+  <ul className="pagination">
+    <li className="page-item"><button className="page-link" disabled> --- </button></li>
+    {page && totalPage.map((el) => (
+    <li key={el} className="page-item" name="page[number]"><button className="page-link" onClick={() => handlePage(el)}>{el}</button></li>
+    ))}
+    <li className="page-item"><button className="page-link" disabled> --- </button></li>
   </ul>
 </nav>
 </div>
