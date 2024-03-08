@@ -1,9 +1,14 @@
 import axios from "axios";
 import { useState } from "react";
 import Swal from "sweetalert2";
+import BASE_URL from "../src/constant";
+import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const UploadImg = () => {
   const [file, setFile] = useState(null);
+  const { id } = useParams();
+  const navigate = useNavigate();
 
   const handleChange = (event) => {
     const image = event.target.files[0];
@@ -17,7 +22,23 @@ const UploadImg = () => {
 
       formData.append("image", file);
 
-      const { data } = await axios({});
+      await axios({
+        method: "PATCH",
+        url: `${BASE_URL}/lodgings/${id}`,
+        headers: {
+          Authorization: "Bearer " + localStorage.access_token,
+          "Content-Type": "multipart/form-data",
+        },
+        data: formData
+      });
+
+      navigate("/");
+      Swal.fire({
+        title: "Success Edit The Image",
+        icon: "success",
+        timer: 2000,
+        showConfirmButton: false,
+      });
     } catch (error) {
       console.log(error);
       Swal.fire({
@@ -28,6 +49,8 @@ const UploadImg = () => {
       });
     }
   };
+//   console.log(setFile, "<<< INI FUNC");
+//   console.log(file, "<<<");
   return (
     <>
       <section
@@ -37,7 +60,7 @@ const UploadImg = () => {
         <div className="row">
           <div className="col-12 col-md-6">
             <div className="pt-3 pb-2 mb-3">
-              <form id="register-form">
+              <form id="register-form" onSubmit={handleSubmitForm}>
                 <h1 className="h3 mb-3 display-1">Update Image</h1>
                 {/* <div class="mb-3"> */}
                 <div className="input-group mb-3">

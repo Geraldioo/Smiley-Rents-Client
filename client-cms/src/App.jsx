@@ -13,6 +13,7 @@ import AddPage from '../pages/addPage';
 import EditPage from '../pages/editPage';
 import AddUser from '../pages/addUser';
 import TypePage from '../pages/typePage';
+import UploadImg from '../pages/addImage';
 
 
 const router = createBrowserRouter([
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "/lodgings/:id",
         element: <EditPage />,
+      },
+      {
+        path: "/uploadImg/:id",
+        element: <UploadImg />,
       },
       {
         path: "/add-user",

@@ -118,7 +118,7 @@ function MainPage() {
                               edit
                             </span>
                           </Link>
-                          <Link to={""} className="ms-3">
+                          <Link to={`/uploadImg/${lodging.id}`} className="ms-3">
                             <span className="icon material-symbols-outlined text-danger">
                               image
                             </span>

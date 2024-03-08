@@ -9,7 +9,6 @@ const AddUser = () => {
   const [input, setInput] = useState({
     email: "",
     password: "",
-    role: "",
     phoneNumber: "",
     address: "",
   });
