@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import Swal from 'sweetalert2'
 import { useNavigate } from "react-router-dom"
+import BASE_URL from "../src/constant";
 
 
 function LoginPage() {
@@ -39,19 +40,28 @@ function LoginPage() {
     try {
       const { data } = await axios({
         method: "POST",
-        url: "http://54.169.245.11/login",
+        url: `${BASE_URL}/login`,
         data: input,
       });
       // 2. Simpan ke localstorage
-    //   console.log(data, "INI DATA");
+      console.log(data, "INI DATA");
       localStorage.access_token = data.token;
+    //   localStorage.setItem("email", data.email)
       // 3. Pindahin halaman ke home
       navigate("/lodgings")
+      Swal.fire({
+        title: "Success Login",
+        icon: "success",
+        timer: 2000,
+        showConfirmButton: false
+      });
     } catch (error) {
         // console.log(error, "<<< INI ERROR");
       Swal.fire({
         title: error.response.data.message,
         icon: "error",
+        timer: 1000,
+        showConfirmButton: false
       });
     }
   };
@@ -59,11 +69,11 @@ function LoginPage() {
   return (
     <>
       {/* Login Section */}
-      {/* <section className="container" id="login-section">
+      <section className="container" id="login-section">
         <div className="row">
           <div className="col-12 text-center">
-            <h1 className="mb-3 mt-5">Login Options</h1>
-            <span>
+            <h1 className="mb-3 mt-5" style={{color:"black"}}>Login Options</h1>
+            <span style={{color:"black"}}>
               Log in and autocomplete your order with your personal data, or
               sign up to enjoy all the benefits of your account.
             </span>
@@ -80,16 +90,16 @@ function LoginPage() {
               <div className="col-10 col-md-6 p-5 text-left">
                 <div className="form-signin m-auto">
                   <form id="login-form" onSubmit={handleSubmit}>
-                    <h1 className="h3 mb-4 display-5">
+                    <h1 className="h3 mb-4 display-5" style={{color:"black"}}>
                       Log in to your account
                     </h1>
-                    <span>
+                    <span style={{color:"black"}}>
                       Log in on your profile to autocomplete your purchase order
                       with your personal data.
                     </span>
                     <div className="mb-3 mt-3">
                       <div className="d-flex justify-content-between">
-                        <label htmlFor="login-email">Email</label>
+                        <label htmlFor="login-email" style={{color:"black"}}>Email</label>
                         <label className="text-danger text-end fw-bold">
                           *
                         </label>
@@ -108,7 +118,7 @@ function LoginPage() {
                     </div>
                     <div className="mb-4">
                       <div className="d-flex justify-content-between">
-                        <label htmlFor="login-password">Password</label>
+                        <label htmlFor="login-password" style={{color:"black"}}>Password</label>
                         <label className="text-danger text-end fw-bold">
                           *
                         </label>
@@ -136,6 +146,7 @@ function LoginPage() {
                         <label
                           className="form-check-label"
                           htmlFor="login-remember"
+                          style={{color:"black"}}
                         >
                           Remember me
                         </label>
@@ -154,17 +165,7 @@ function LoginPage() {
           </div>
         </div>
       </section>
-      End Login Section */}
-      <div
-  className="visme_d"
-  data-title="Untitled Project"
-  data-url="8r6noq0k-untitled-project"
-  data-domain="forms"
-  data-full-page="false"
-  data-min-height="500px"
-  data-form-id={42866}
-/>
-
+      {/* End Login Section */}
     </>
   );
 }

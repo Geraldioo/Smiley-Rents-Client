@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import BASE_URL from "../src/constant";
 
 const Form = () => {
   const navigate = useNavigate();
@@ -39,7 +40,7 @@ const Form = () => {
     try {
       await axios({
         method: "POST",
-        url: "http://54.169.245.11/lodgings",
+        url: `${BASE_URL}/lodgings`,
         headers: {
           Authorization: "Bearer " + localStorage.access_token,
         },
@@ -62,7 +63,7 @@ const Form = () => {
         className="col-md-9 ms-sm-auto col-lg-10 px-md-4"
         id="new-product-section"
       >
-        <div className="row">
+        <div className="row ">
           <div className="col-12 col-md-6">
             <form id="product-form" onSubmit={submitForm}>
               <div className="mb-3">
@@ -179,12 +180,13 @@ const Form = () => {
               </div>
               <div className="row mt-5 mb-3">
                 <div className="col-6">
-                  <a
+                  <Link 
+                    to={-1}
                     className="btn btn-lg btn-light rounded-pill w-100 p-2"
                     href=""
                   >
                     Cancel
-                  </a>
+                  </Link>
                 </div>
                 <div className="col-6">
                   {/* <Link to={"/lodgings"}> */}

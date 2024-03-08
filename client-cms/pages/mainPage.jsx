@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 // import CardItem from "../components/Card";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import Swal from "sweetalert2";
-// import BASE_URL from "../src/constants";
+import BASE_URL from "../src/constant";
 
 function MainPage() {
   const [lodgings, setLodging] = useState(null);
@@ -12,7 +11,7 @@ function MainPage() {
     try {
       const { data } = await axios({
         method: "GET",
-        url: `http://54.169.245.11/lodgings`,
+        url: `${BASE_URL}/lodgings`,
         headers: {
           Authorization: "Bearer " + localStorage.access_token,
         },
@@ -38,7 +37,7 @@ function MainPage() {
         id="product-section"
       >
         <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-          <h1 className="display-2">Products</h1>
+          <h1 className="display-2" style={{color:"white"}}>Products</h1>
           <Link to={`/lodgings/add`} className="ms-3">
             <button className="btn btn-primary rounded-pill" id="new-product">
               <span className="icon material-symbols-outlined">add</span>New
@@ -85,16 +84,14 @@ function MainPage() {
                               delete
                             </span>
                           </a>
-                          <a href="" className="ms-3">
+                          <Link to={`lodgings/${lodging.id}`} className="ms-3">
                             <span className="icon material-symbols-outlined text-danger">
                               edit
                             </span>
-                          </a>
-                          <Link to={`/lodgings/${lodging.id}`} className="ms-3">
+                          </Link>
                             <span className="icon material-symbols-outlined text-danger">
                               image
                             </span>
-                          </Link>
                         </span>
                       </td>
                     </tr>
