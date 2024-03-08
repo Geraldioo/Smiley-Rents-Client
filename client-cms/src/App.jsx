@@ -11,6 +11,7 @@ import MainLayout from "../components/mainLayout";
 import MainPage from '../pages/mainPage';
 import AddPage from '../pages/addPage';
 import EditPage from '../pages/editPage';
+import AddUser from '../pages/addUser';
 
 
 const router = createBrowserRouter([
@@ -39,28 +40,14 @@ const router = createBrowserRouter([
         path: "/lodgings/:id",
         element: <EditPage />,
       },
-      // {
-      //   // delete
-      //   path: "/lodgings/:id",
-      //   element: <HomePage />,
-      // },
+      {
+        path: "/add-user",
+        element: <AddUser />
+      }
       // {
       //   path: "/types",
       //   element: <TypePage />,
       // },
-      // {
-      //   path: "/types",
-      //   element: <AddTypePage />,
-      // },
-      // {
-      //   path: "/types/:id",
-      //   element: <EditTypePage />,
-      // },
-      // {
-      //   // delete
-      //   path: "/types/:id",
-      //   element: <TypePage />,
-      // }
     ],
   },
   {

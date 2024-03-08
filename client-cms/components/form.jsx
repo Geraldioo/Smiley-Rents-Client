@@ -19,7 +19,7 @@ const Form = () => {
     price: "",
     typeId: "",
   });
-//   console.log(input, "<< input");
+  //   console.log(input, "<< input");
   const handleInputChange = (event) => {
     // console.log(event.target, "<<< INI EVENT");
     const { name, value } = event.target;
@@ -37,29 +37,45 @@ const Form = () => {
 
   const submitForm = async (event) => {
     event.preventDefault();
-
-    let config = {
-      method: "POST",
-      url: `${BASE_URL}/lodgings`,
-      headers: {
-        Authorization: "Bearer " + localStorage.access_token,
-      },
-      data: input,
-    };
-
-    if (id) {
-      (config.method = "PUT"), (config.url = `${BASE_URL}/lodgings/${id}`);
-    }
+    let message;
     try {
-      await axios(config);
+      if (id) {
+        await axios({
+          method: "PUT",
+          url: `${BASE_URL}/lodgings/${id}`,
+          headers: {
+            Authorization: "Bearer " + localStorage.access_token,
+          },
+          data: input,
+        });
+        message = "Edit";
+      } else {
+        await axios({
+          method: "POST",
+          url: `${BASE_URL}/lodgings`,
+          headers: {
+            Authorization: "Bearer " + localStorage.access_token,
+          },
+          data: input,
+        });
+        message = "Add New";
+      }
 
       navigate("/lodgings");
+      Swal.fire({
+        title: `Succes ${message} Lodgings`,
+        icon: "success",
+        timer: 2000,
+        showConfirmButton: false,
+      });
     } catch (error) {
       console.log(error);
       setError(error);
       Swal.fire({
         title: error.response.data.message,
         icon: "error",
+        timer: 2000,
+        showConfirmButton: false,
       });
     }
   };

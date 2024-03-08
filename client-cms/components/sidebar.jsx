@@ -8,7 +8,13 @@ function Sidebar(){
     // console.log(localStorage.access_token);
       localStorage.clear();
 
-      return navigate('/login')
+      navigate('/login')
+      Swal.fire({
+        title: "Succes Logout",
+        icon: "success",
+        timer: 2000,
+        showConfirmButton: false
+      });
   }
 
   return (

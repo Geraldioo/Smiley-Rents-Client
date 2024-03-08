@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import BASE_URL from "../src/constant";
+import Swal from "sweetalert2";
 
 function MainPage() {
   const [lodgings, setLodging] = useState(null);
@@ -23,8 +24,31 @@ function MainPage() {
       console.log(error);
     }
   }
-  //   // console.log(fetchData, "<<< INI FETCH");
-  //   console.log(lodgings, "<<< INI data");
+
+  const deleteData = async (id) => {
+    try {
+      await axios({
+        method: "DELETE",
+        url: `${BASE_URL}/lodgings/${id}`,
+        headers: {
+          Authorization: "Bearer " + localStorage.access_token,
+        },
+      });
+
+      fetchData();
+
+      lodgings.map((lodging) => {
+        Swal.fire({
+          title: `${lodging.name} Has Been Deleted`,
+          icon: "warning",
+          timer: 2000,
+          showConfirmButton: false,
+        });
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   useEffect(() => {
     fetchData();
@@ -37,7 +61,9 @@ function MainPage() {
         id="product-section"
       >
         <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-          <h1 className="display-2" style={{color:"white"}}>Products</h1>
+          <h1 className="display-2" style={{ color: "white" }}>
+            Products
+          </h1>
           <Link to={`/lodgings/add`} className="ms-3">
             <button className="btn btn-primary rounded-pill" id="new-product">
               <span className="icon material-symbols-outlined">add</span>New
@@ -79,21 +105,24 @@ function MainPage() {
                       <td>{lodging.User.email}</td>
                       <td>
                         <span className="d-flex">
-                          <Link to={""} className="ms-3">
-                            <span className="icon material-symbols-outlined text-danger">
+                            <span
+                              onClick={() => {
+                                deleteData(lodging.id);
+                              }}
+                              className="icon material-symbols-outlined text-danger" style={{cursor: "pointer"}}
+                            >
                               delete
                             </span>
-                            </Link>
                           <Link to={`/lodgings/${lodging.id}`} className="ms-3">
                             <span className="icon material-symbols-outlined text-danger">
                               edit
                             </span>
                           </Link>
-                          <Link to={t} className="ms-3">
+                          <Link to={""} className="ms-3">
                             <span className="icon material-symbols-outlined text-danger">
                               image
                             </span>
-                            </Link>
+                          </Link>
                         </span>
                       </td>
                     </tr>
