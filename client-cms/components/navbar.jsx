@@ -10,7 +10,7 @@ function Navbar(){
   >
     <Link to={"/"} className="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6">
       <img
-        src="../src/image/logo.png"
+        src="https://i.pinimg.com/564x/90/57/eb/9057eb400353ef31192607a4b5aca22b.jpg"
         width={45}
         className="d-inline-block me-2"
         alt="IDEA"
